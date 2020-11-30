@@ -41,7 +41,7 @@ public class DashBoardFragment extends Fragment {
     }
     private void loadDataBarang() {
         adapterDaftarBarang = new AdapterDaftarBarang(getContext());
-        Call<Data_Response> daftar_barang = interfaceConnection.daftar_barang();
+        Call <Data_Response> daftar_barang = interfaceConnection.daftar_barang();
         daftar_barang.enqueue(new Callback<Data_Response>() {
             @Override
             public void onResponse(Call<Data_Response> call, Response<Data_Response> response) {
